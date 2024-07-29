@@ -1,6 +1,5 @@
 <script setup>
 import Login from './components/login.vue'
-import Login from './components/protuario.vue'
 </script>
 
 <template>
