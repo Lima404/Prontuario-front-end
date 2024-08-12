@@ -28,11 +28,9 @@
     },
     methods: {
       login() {
-        // Lógica de login
         console.log('Login data:', this.loginData);
       },
       register() {
-        // Lógica para redirecionar para a página de cadastro
         console.log('Redirect to registration page');
       }
     }
