@@ -5,7 +5,6 @@ import prontuario from './components/prontuario.vue';
 
 <template>
     <prontuario></prontuario>
-    <Login />
 </template>
 
 <style scoped>
