@@ -170,16 +170,16 @@
   };
   </script>
   
-  <style scoped>
+<style scoped>
   @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
   }
-
+  
   .paciente-form {
     max-width: 100%;
-    background: rgba(255, 0, 0, 0.219);
+    background: rgba(255, 255, 255, 0.219);
     backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
@@ -187,25 +187,24 @@
     border: 1px solid rgb(255, 255, 255);
     margin: 20px;
   }
-
+  
   .form-group {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
   }
-
+  
   .form-group label {
-    width: 100%;
-    margin-bottom: 5px;
+    width: 30%;
+    margin-right: 10px;
     font-weight: bold;
-    font-size: 16px;
-    color: #333;
+    font-size: 20px;
+    color: #000000;
   }
-
+  
   .form-group input,
   .form-group textarea {
-    width: calc(50% - 10px);
+    width: 70%;
     padding: 12px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -213,23 +212,23 @@
     box-sizing: border-box;
     font-size: 14px;
   }
-
+  
   .form-group.full-width input,
   .form-group.full-width textarea {
     width: 100%;
   }
-
+  
   .form-group input[type="text"],
   .form-group textarea {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
   }
-
+  
   .form-group input:focus,
   .form-group textarea:focus {
     border-color: #007bff;
   }
-
+  
   button {
     width: 100%;
     padding: 15px;
@@ -242,15 +241,13 @@
     margin-top: 20px;
     font-weight: bold;
   }
-
+  
   button:hover {
     background-color: #0056b3;
   }
-
+  
   button + button {
     margin-top: 10px;
   }
 </style>
-
-
   
