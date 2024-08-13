@@ -1,9 +1,10 @@
 <script setup>
 import Login from './components/login.vue'
+import prontuario from './components/prontuario.vue';
 </script>
 
 <template>
-  <Login />
+    <prontuario></prontuario>
 </template>
 
 <style scoped>
