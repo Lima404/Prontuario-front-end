@@ -66,10 +66,10 @@
           <input type="file" id="exames" @change="handleFileUpload" />
         </div>
   
-        <button type="submit">Salvar</button>
+        <button type="submit" class="btn-primary">Salvar</button>
       </form>
   
-      <div v-if="pacienteSalvo">
+      <div v-if="pacienteSalvo" class="paciente-perfil">
         <h2>Perfil do Paciente</h2>
         <p><strong>Nome:</strong> {{ paciente.nome }}</p>
         <p><strong>CPF:</strong> {{ paciente.cpf }}</p>
@@ -90,8 +90,8 @@
         <p><strong>Histórico de Medicamentos:</strong> {{ prontuario.historicoMedicamentos }}</p>
         <p><strong>Exames:</strong> <a :href="prontuario.examesUrl" download>Download</a></p>
   
-        <button @click="editPaciente">Editar</button>
-        <button @click="exportToPDF">Exportar para PDF</button>
+        <button @click="editPaciente" class="btn-secondary">Editar</button>
+        <button @click="exportToPDF" class="btn-secondary">Exportar para PDF</button>
       </div>
     </div>
   </template>
@@ -170,84 +170,61 @@
   };
   </script>
   
-<style scoped>
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
+  <style scoped>
   .paciente-form {
-    max-width: 100%;
-    background: rgba(255, 255, 255, 0.219);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(to right, #255de2, #eef1f5);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 4px 30px rgb(0, 0, 0);
-    border: 1px solid rgb(255, 255, 255);
-    margin: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
   }
   
   .form-group {
     display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    flex: 1;
   }
   
-  .form-group label {
-    width: 30%;
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 20px;
-    color: #000000;
+  form button {
+    margin-top: 25px;
   }
   
-  .form-group input,
-  .form-group textarea {
-    width: 70%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 14px;
+  h2, h3 {
+    margin-bottom: 30px;
+    font-size: 1.8em;
   }
   
-  .form-group.full-width input,
-  .form-group.full-width textarea {
-    width: 100%;
-  }
-  
-  .form-group input[type="text"],
-  .form-group textarea {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #007bff;
-  }
-  
-  button {
-    width: 100%;
-    padding: 15px;
+  .btn-primary {
     background-color: #007bff;
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 15px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    font-weight: bold;
   }
   
-  button:hover {
+  .btn-primary:hover {
     background-color: #0056b3;
   }
   
-  button + button {
-    margin-top: 10px;
+  .btn-secondary {
+    background-color: #6c757d;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 10px;
   }
-</style>
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  </style>
   
